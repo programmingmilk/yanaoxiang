@@ -1,0 +1,68 @@
+int main()
+{
+	int q = 0;
+	int w = 0;
+	int z = 0;
+	printf("请输入两个数：\n");
+	scanf("%d%d", &q, &w);
+	z = q + w;
+	printf("%d\n", z);
+	return 0;
+}//加法程序代码
+
+
+int main()
+{
+	int q = 0;
+	int w = 0;
+	int z = 0;
+	printf("请输入两个数：");
+	scanf("%d%d", &q, &w);
+	if (q>w)
+	{
+		z = q - w;
+	}
+	else
+	{
+		z = w - q;
+	}
+	printf("两数之差为：%d", z);
+	return 0;
+}//差法程序代码
+
+int main()
+{
+	double q = 0;
+	double w = 0;
+	double z = 0;
+	printf("请输入两个数：");
+	scanf("%lf%lf", &q, &w);
+	z = w * q;
+	printf("两数之积为：%lf", z);
+	return 0;
+}//两个数的乘法代码。
+
+int main()
+{
+	int q = 0;
+	int w = 0;
+	double z = 0;
+	printf("请输入两个数：");
+	scanf("%d%d", &q, &w);
+	z = q / w;
+	printf("%lf", z);
+	return 0;
+}//除法代码
+
+int main()
+{
+	int a = 0;
+	int b = 0;
+	printf("请输入两个数：");
+	scanf("%d%d", &a, &b);
+	if (a > b)
+		printf("%d\n", a);
+	else
+		printf("%d\n", b);
+	return 0;
+}//两个数比大小代码
