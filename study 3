@@ -1,0 +1,95 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int NUM(int x, int y)
+{
+	int z = x + y;
+	return z;
+}//创建一个加法函数，以后用的时候直接调用即可。
+int main()
+{
+	int q = 0;
+	int w = 0;
+	printf("请输入两个数：");
+	scanf("%d%d", &q, &w);
+	int num = NUM(q, w);
+	printf("%d\n", num);
+	return 0;
+}///加法函数代码
+
+
+
+int max(int x, int y)
+{
+        if (x >= y)
+        {
+			return x;
+        }
+        else
+        {
+			return y;
+        }
+}//将比大小写作一个函数，后面代码需要直接调用即可。
+int main()
+{
+	int q = 0;
+	int w = 0;
+	printf("请输入两个数：  \n");
+	scanf("%d%d", &q, &w);
+	printf("%d", max(q, w));
+	return 0;
+}//以函数形式比大小
+
+int main()
+{
+	int arr[10] = { 0 };
+	printf("%d\n", arr[2]);
+	printf("%d\n", sizeof(arr));
+	printf("%d\n", sizeof(arr) / sizeof(arr[0]));//   "sizieof（arr）/sizeof(arr[0])"可以计算数组或字符组的字符数量或者整形数量  sizeof为该量所含字节大小。
+	return 0;
+}//int数组从0开始
+
+
+
+int main()
+{
+	int i = 0;
+	int line = 1;
+	while (i<1000)
+	{
+		printf("继续努力   %d\n", line);
+		i++; line++;
+	}
+	printf("成功了\n");
+	return 0;
+}//初识while循环。
+
+
+
+int main()
+{
+	int a[] = { 1,2,3,4,5,6,7,8,9,10 };
+	printf("%d\n\n", a[3]);
+	int i = 0;
+	while (i<10)
+	{
+		printf("%d\n", a[i]);
+			i++;
+	}
+	return 0;
+}//以循环函数出现数组的所有元素。
+
+enum color
+{
+	RED,
+	HUANG,
+	LAN,
+  LV
+};//枚举 enum，
+int main()
+{
+	printf("%d\n", RED);
+	printf("%d\n", HUANG);
+	printf("%d\n", LAN);
+	printf("%d\n", LV);
+	return 0;
+}//从0开始依次递增。
