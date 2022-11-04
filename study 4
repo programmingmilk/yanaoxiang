@@ -1,0 +1,103 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+	int i = 1;
+	int line = 1;
+	float a = 1;
+	while (i <= 40) //40个人的班进行循环
+	{
+		printf("请输入成绩: ");
+		scanf("%f", &a);
+		if (a >= 60 && a < 85)
+		{
+			printf("及格  %d\n", line);
+		}
+		else if (a >= 85 && a <100)
+		{
+			printf("优秀  %d\n", line);
+		}
+		else if (a==100)
+		{
+			printf("满分  %d\n", line);
+		}
+		else if (a < 60)
+		{
+			printf("不及格  %d\n", line);
+		}
+		i++;
+		line++;
+	}
+		return 0;
+}//循环里套用if函数,40个人的班的成绩代码
+
+
+int main()
+{
+	printf("c:\\test\\32\\test.c\n");
+	printf("%d\n", strlen("c:\\test\\32\\test.c"));
+	return 0;
+}// \代表转义字符，strlen表示后面字符串的长度。
+
+
+int main()
+{
+	char num[] = "abc";
+	char num1[] = { 'a','b','c'};
+	char num2[] = { 'a','b','c',0 };
+	char num3[] = { 'a','b','c','\0' };//  \0为终止
+	printf("%d\n", strlen(num)); 
+	printf("%d\n", strlen(num1));
+	printf("%d\n", strlen(num2));
+	printf("%d\n", strlen(num3));//strlen定义字符串长度
+	return 0;
+}// \为转义字符  \n为换行 \ddd   \xhh 都为一个字符。
+
+#define MAX 10 //定义MAX==10，MAX变成一个常量10
+int main()
+{
+	int www[MAX] = { 0 };
+	printf("%d\n", MAX);
+	printf("%d\n", www[2]);
+	return 0;
+}//define的作用 定义
+
+
+int main()
+{
+	int i = 0;
+	int arr[] = { 23,23,3,1,2,-5,5,-7,-4,-34,23,23,124,4,-4 };
+	int w = 0;
+	while (i < (sizeof(arr)/sizeof(arr[0])))
+	{
+		if (arr[i] >= 0)
+		{
+			w++;
+		}
+		i++;
+	}
+	printf("%d\n", w);
+	return 0;
+}//找出一串数组大于0的数
+
+
+
+
+struct people//struct是一个结构体，创建一个结构体。
+{
+	char name[20];
+	int nianling;
+	char xingbie[10];
+	int xuehao;
+};
+int main()
+{
+	struct people a = { "张三",20,"男",20180101 };
+	struct people* b = &a;//&为取地址符号
+	printf("名字为： %s\n", b->name);
+	printf("年龄为： %d\n", a.nianling);
+	printf("性别为： %s\n", a.xingbie);
+	printf("学号为： %d\n", a.xuehao);
+	return 0;
+}//用结构体函数
