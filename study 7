@@ -1,0 +1,41 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+
+int main()
+{
+	int ch = 0;
+	while ((ch = getchar()) != EOF)
+	{
+		if (ch < '0' || ch>'9')//||为逻辑或符号
+		{
+			continue;
+		}
+			putchar(ch);
+	}	
+	return 0;
+}//getchar的使用方法和continue的使用方法
+
+
+int main()
+{
+	int a,b = 0;
+	char password[20] = { 0 };
+	printf("请输入密码： \n");
+	scanf("%s", password);
+	printf("确认密码（Y\N）： ");
+	while ((b=getchar())!='\n')
+	{
+		getchar();//这个循环函数把缓冲区‘/n’之前包括其全部收纳，清空缓冲区。
+	}
+	a = getchar();// getchar和password都是输入函数，
+	if (a=='Y')
+	{
+		printf("确认成功\n");
+	}
+	else
+	{
+		printf("确认失败\n");
+	}
+	return 0;
+}认识getchar和scanf两个输入的差别，getchar从缓冲区拿一个字符，scanf拿一串  遇到  字符停下。
