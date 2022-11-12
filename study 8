@@ -1,0 +1,99 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <windows.h>
+#include <string.h>
+
+int main()
+{
+	int ch = 0;
+	while ((ch=getchar())!=EOF)
+	{
+		if (ch < '0' || ch>'9')
+		{
+			;
+		}
+		else
+		{
+			printf("%c", ch);
+		}
+	}
+	return 0;
+}//getchar的使用规则
+
+
+
+int main()
+{
+	int i = 0;
+	for (i = 1; i < 11; i++)
+	{
+		printf("%d\n", i);
+	}
+	return 0;
+}//for循环初使用
+
+
+
+int main()
+{
+	int i,a = 0;
+	for ( i = 1; i <= 40; i++)
+	{
+		scanf("%d", &a);
+		if (a<60)
+		{
+			printf("不及格\n");
+		}
+		else
+		{
+			printf("及格\n");
+		}
+	}
+	return 0;
+}//for循环里嵌套if语句
+
+
+
+int main()
+{
+	int i = 0;
+	for ( i = 0; i < 11; i++)
+	{
+		if (i ==5)
+		{
+			continue;
+			printf("hehe\n");
+		}
+		else if (i==8)
+		{
+			printf("haha\n");
+			break;
+		}
+		printf("heihei\n");
+	}
+	return 0;
+}//continue和break适用与for循环。，并且不能在for循环内部改变循环变量。
+
+
+
+int main()
+{
+	for (;;)
+	{
+		printf("hehe\n");
+	}
+	return 0;
+}//for循环的初始化调整判断三部分都可以省略，省略判断部分即判断恒真，死循环
+
+
+
+int main()
+{
+	int i,k = 0;
+	for ( i = 0,k=0; k=0; i++,k++)
+	{
+		k++;
+		printf("%d", k);
+	}
+	return 0;
+}//笔试题，不执行循环 for里判断为赋值，结果是0 ，0为假 不循环，若赋值为1，则为死循环。
