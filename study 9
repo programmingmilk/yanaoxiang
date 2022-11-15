@@ -1,0 +1,137 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <windows.h>
+#include <string.h>
+
+
+int main()
+{
+	int i = 1;
+	do
+	{
+		printf("%d\n", i);
+		i++  ;
+	} while (i<=10);
+	return 0;
+}//初识do while循环。
+
+
+int main()
+{
+	int n,x = 0;
+	int m = 1;
+	printf("请输入一个数：  \n");
+	scanf("%d", &x);
+	for (n = 1; n <=x ; n++)
+	{
+		m= m * n;		
+	}
+	printf("%d的阶乘为：%d", x, m);
+	return 0;
+}//阶乘代码
+
+
+
+int main()
+{
+	int i = 0;
+	int m = 0;
+	int n = 1;
+	for ( i = 1; i <=10; i++)
+	{
+		n = n * i;
+		m = m + n;
+	}
+	printf("%d\n", m);
+	return 0;
+}//1！+2！。。。。+10！的总数字。
+
+
+int main()
+{
+	int i;
+	int n = 10;
+	int  mul = 1;
+	int  sum = 0;
+	while (n > 0)
+	{
+		for (i = 1; i <= n; i++)
+		{
+			mul = mul * i;
+		}
+		sum = sum + mul;
+		mul = 1;
+		n--;
+	}
+	printf("结果为：%d", sum);
+	return 0;
+}//1！+2！。。。。+10！的总数字。
+
+
+int main()
+{
+	char arr1[] = { "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH" };
+	char arr2[] = { "                                            " };
+	int left = 0;//左下标
+	int right = 43/*strlen(arr1) - 1*/;//strlen计算的是字符串的长度，而数组下标是从0开始的，所以最后一个下标要-1
+	printf("%s\n", arr2);
+	for (left=0,right=43;left <= right;left++,right--)
+	{
+		arr2[left] = arr1[left];//把arr1数组的左边值赋给arr2的左边值
+		arr2[right] = arr1[right];//把arr1数组的右边值赋给arr2的右边值
+		printf("%s\n", arr2);
+	}
+	return 0;
+}//字符向中间汇聚；
+
+
+int main()
+{
+	int i = 0;
+	char arr[20]  = {0};
+	char aaa[20] = { "yan123zxc"};
+	for ( i = 0; i < 3; i++)
+	{
+		printf("请输入密码：   \n");
+		scanf("%s", arr);
+		if(strcmp(arr,aaa)==0)//，strcmp函数比较两个字符串，相等则为0
+		{
+			printf("登录成功\n ");
+			break;
+		}
+		else
+		{
+			printf("登录失败，请重试\n");
+		}
+	}
+	if (strcmp(arr, aaa) == 0)
+	{
+		;
+	}
+	else
+	{
+		printf("输入三次错误。GG\n");
+	}
+	return 0;
+}//密码输入代码。
+
+
+int main()
+{
+	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+	int i = 0;
+	for ( i = 0; i < 10; i++)
+	{
+		if (arr[i]==7)
+		{
+			printf("在第%d个元素中找到了7", i);
+				break;
+		}
+
+	}
+	if (i==10)
+	{
+		printf("找不到\n");
+	}
+	return 0;
+}
